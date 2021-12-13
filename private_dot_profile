@@ -4,6 +4,8 @@ export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$PATH
 export EDITOR='vim'
 
 # Source local profile flavors
-source $HOME/.profile.$(hostname)
+if [[ -f $HOME/.profile.$(hostname) ]]; then
+    source $HOME/.profile.$(hostname)
+fi 
 source $HOME/.alias.kube
 
