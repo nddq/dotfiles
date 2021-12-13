@@ -1,7 +1,5 @@
 [include]
 	path = ~/.gitconfig.local
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [commit]
 	gpgSign = true
 [tag]
@@ -12,3 +10,5 @@
 	rebase = true
 [fetch]
 	prune = true
+[core]
+	editor = vim
