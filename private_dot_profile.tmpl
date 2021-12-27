@@ -9,3 +9,7 @@ if [[ -f $HOME/.profile.$(hostname) ]]; then
 fi 
 source $HOME/.alias.kube
 
+{{- if .chezmoi.kernel.osrelease | lower | contains "wsl" }}
+# Source WSL-specific config
+source $HOME/.profile.wsl
+{{- end}}
