@@ -12,9 +12,5 @@
 	prune = true
 [core]
 	editor = vim
-[user]
-	email = rbtr@users.noreply.github.com
-	name = rbtr
-	signingkey = C7A2B9501F6EC451AB76A590193C4ACC0CBC8745
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
