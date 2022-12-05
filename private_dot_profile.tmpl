@@ -1,15 +1,19 @@
 # Set up the environment
 # Add bins to path
-export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$PATH
+export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$HOME/bin:$PATH
 export EDITOR='vim'
 
 # Source local profile flavors
 if [[ -f $HOME/.profile.$(hostname) ]]; then
     source $HOME/.profile.$(hostname)
 fi 
-source $HOME/.alias.kube
 
 {{- if .chezmoi.kernel.osrelease | lower | contains "wsl" }}
 # Source WSL-specific config
-source $HOME/.profile.wsl
+if [[ -f $HOME/.profile.$(wsl) ]]; then
+	source $HOME/.profile.wsl
+fi
 {{- end}}
+
+# Import aliases
+source $HOME/.alias.kube
