@@ -10,7 +10,7 @@ fi
 
 {{- if .chezmoi.kernel.osrelease | lower | contains "wsl" }}
 # Source WSL-specific config
-if [[ -f $HOME/.profile.$(wsl) ]]; then
+if [[ -f $HOME/.profile.wsl ]]; then
 	source $HOME/.profile.wsl
 fi
 {{- end}}
