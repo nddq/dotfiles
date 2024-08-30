@@ -108,3 +108,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt correct
 eval "$(starship init zsh)"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
